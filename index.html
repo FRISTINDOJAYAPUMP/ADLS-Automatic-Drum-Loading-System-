@@ -199,8 +199,6 @@ const ua=add(new THREE.CylinderGeometry(.3,.3,1.5,32),wh,.75,0,0,el);ua.rotation
 const SH=-.25,EL=.1;sh.rotation.z=SH;el.rotation.z=EL;
 const tool=new THREE.Group();tool.position.x=1.55;tool.rotation.z=-(SH+EL);el.add(tool);
 add(CY(.3,.64,36),wh,0,0,0,tool).rotation.x=Math.PI/2;[1,-1].forEach(k=>add(CY(.07,.02,16),dark,0,-.12,k*.322,tool,false).rotation.x=Math.PI/2);
-{const lc=document.createElement('canvas');lc.width=256;lc.height=128;const g=lc.getContext('2d');g.fillStyle='#c9ced3';g.fillRect(0,0,256,128);g.fillStyle='#e8541c';g.beginPath();g.moveTo(20,100);g.lineTo(70,20);g.lineTo(95,20);g.lineTo(45,100);g.fill();g.fillStyle='#2b3138';g.font='bold 62px Arial';g.textAlign='left';g.textBaseline='middle';g.fillText('HWA',105,64);
- const lb=new THREE.Mesh(new THREE.PlaneGeometry(.26,.13),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(lc)}));lb.position.set(0,.07,.324);tool.add(lb)}
 add(CY(.17,.2),wh,0,-.24,0,tool);add(CY(.21,.04),dark,0,-.36,0,tool);
 add(CY(.15,.08,24),wh,0,-.41,0,tool);add(BX(.14,.1,.14),wh,0,-.46,0,tool);add(CY(.1,.03,20),dark,0,-.49,0,tool);
 for(let i=0;i<3;i++){const f=new THREE.Group();f.rotation.y=i*2*Math.PI/3+Math.PI/2;tool.add(f);
